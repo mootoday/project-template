@@ -1,0 +1,19 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.10.7/.schema/devbox.schema.json",
+  "packages": [
+    "tmux@latest",
+    "tmuxp@latest",
+    "gh@latest"
+  ],
+  "shell": {
+    "init_hook": [
+      "gh auth status > /dev/null || gh auth login",
+      "gh extension list | grep -q 'gh dash' || gh extension install dlvhdr/gh-dash"
+    ],
+    "scripts": {
+      "tmux": [
+        "tmuxp load --yes .config/tmux/tmuxp.yaml"
+      ]
+    }
+  }
+}

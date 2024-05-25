@@ -1,0 +1,19 @@
+# Learn more at https://tmuxp.git-pull.com/
+session_name: project-template # Change this to the project's directory name
+windows:
+  - window_name: dev
+    layout: tiled
+    panes:
+      - shell_command:
+          - devbox run gh dash --config .config/gh-dash/config.yml
+      - shell_command:
+          - 
+      - shell_command:
+          - devbox run nvim . # or `code .` or whichever editor you want to start
+      - shell_command:
+          -
+      - shell_command:
+          - devbox services up --process-compose-file .config/devbox/process-compose.yaml
+      - shell_command:
+          -
+

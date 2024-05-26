@@ -1,0 +1,6 @@
+# Learn more at https://f1bonacc1.github.io/process-compose/
+version: "0.5"
+
+processes:
+  info:
+    command: echo '' && echo 'Update .config/devbox/process-compose.yaml to run init commands and start your project services. See https://f1bonacc1.github.io/process-compose/ for the full documentation.' && while true; do sleep 1; done
